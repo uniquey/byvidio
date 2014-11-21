@@ -1,0 +1,8 @@
+People = new Mongo.Collection('people');
+
+if (Meteor.isClient){
+  Template.personList.people = function  () {
+    return People.find();
+  };
+}
+

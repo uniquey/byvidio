@@ -1,0 +1,20 @@
+<template name="staff">
+  <p>{{people.length}} Members</p>
+  <ul>
+    {{#each people}}
+    <li>{{>person}}</li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="person">
+  <li>
+    <h2>{{fullName}}</h2>
+    <p>{{#if executive}}
+        <strong>{{job}}</strong>
+        {{else}}
+          {{job}}
+        {{/if}}
+    </p>
+  </li>
+</template>

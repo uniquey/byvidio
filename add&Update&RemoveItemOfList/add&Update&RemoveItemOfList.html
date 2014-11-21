@@ -1,0 +1,26 @@
+<template name = "playerForm">
+  <div>
+    <input type="text" id="playername">
+    <button> Add </button>
+  </div>
+</template>
+
+<template name = "playerList">
+  <h1>Player List</h1>
+  <ul>
+    {{#each players}}
+      {{> player}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name = "player">
+  <li>
+    {{#if editing}}
+      <input type="text" value="{{playername}}" />
+    {{else}}
+      <span class="playername"> {{playername}}</span>
+    {{/if}}
+    <span class="del">(x)</span>
+  </li>
+</template>
