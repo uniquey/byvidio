@@ -4,9 +4,7 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
 coffeescript
 iron:router
 mizzao:bootstrap-3
-
